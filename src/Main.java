@@ -98,9 +98,14 @@ public class Main {
 	}
 	
 	public static void deleteBook() {
-		System.out.println("Masukkan index buku yang ingin di hapus: ");
-		int id = scan.nextInt();
-		books.remove(id-1);
+		try {
+			System.out.println("Masukkan index buku yang ingin di hapus: ");
+			int id = scan.nextInt();
+			books.remove(id-1);
+		} catch (Exception e) {
+			System.out.println("Inputan index salah");
+			
+		}
 	}
 	
 	public static void showMenu() {
